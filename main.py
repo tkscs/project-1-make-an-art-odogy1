@@ -19,7 +19,10 @@ global num
 num = 360/returnmeasurment
 global intrepeat
 intrepeat = int(trepeat)
-turtle.speed(10)
+global posintrepeat
+posintrepeat = abs(intrepeat)
+turtle.speed(100)
+returnmeaurement = 0.5
 def circle():
     turtle.penup()
     turtle.forward(lg - 1)
@@ -28,36 +31,18 @@ def circle():
     turtle.penup()
     turtle.right(180)
     turtle.forward(lg)
-    if returnangle > 180:
-        returnangle = 179.5
+    returnangle = 179.5
     turtle.left(returnangle)
     print (returnangle)
     print (turtle.speed)
-if returnangle > 180:
-    returnangle = 179.5
 
+returnangle = 179.5
 def makeit():
-    for i in range(intrepeat):
+    for i in range(posintrepeat):
         circle()
         print(returnmeasurment)
-        print(intrepeat)
-turtle.penup()
-turtle.right(180)
-turtle.forward(lg * 2)
-turtle.pendown()
-
-
-
+print(abs(intrepeat))
 makeit()
-turtle.penup()
-turtle.right(180)
-turtle.forward(lg * 4)
-turtle.pendown()
-makeit()
-turtle.right(180)
-turtle.forward(lg)
-turtle.pendown()
-turtle.forward(lg * 2)
 
 
 
